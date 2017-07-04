@@ -17,6 +17,7 @@ class App extends Component {
 
     let config = new Config();
     YTSearch({key: config.API_KEY, term: 'surfboards'}, (videos) => {
+      console.log('Search complete: ' + videos);
       this.setState({ videos });
     });
   }
